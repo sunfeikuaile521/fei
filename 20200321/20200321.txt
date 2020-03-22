@@ -1,0 +1,19 @@
+2.=>'language'  =>obj.prop.getFullName;
+3."Tom"
+5.=>20
+7.可以把var改为let，因为let没有变量提升机制
+8.闭包：优点 放置全局变量冲突污染，防止我们的代码和同事代码冲突，形成一个私有的闭包作用域
+9.let和var的区别：let是不允许重复声明的，但var可以重复声明并且不会报错，
+var声明变量的同事也给window声明了一个变量，但是let声明变量和全局变量和GO没有关系
+10.for (let i = 0; i < 10; i++) {
+    setTimeout(() => {
+        console.log(i);
+    }, 1000);
+}
+11输出结果是=>20; =>20;
+var b = 20;
+(function b() {
+   let b = 10;
+    console.log(b);
+})();
+console.log(b);
