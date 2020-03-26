@@ -1,0 +1,22 @@
+5:'tomundefinedjoin'
+9:
+<script>
+        Array.prototype.myUnique=function myUnique(){
+            let obj={};
+            for(let i=0;i<this.length;i++){
+                let item=this[i];
+                if(typeof boj[item]!=="undefined"){
+                    this[i]=this[this.length-1];
+                    this.length--;
+                    i--;
+                }
+                obj[item]=item;
+            }
+            obj=null;
+            return this;
+        }
+        let ary = [12, 23, 12, 13, 13, 12, 23, 14, 8];
+        ary.unique().sort((a, b) => a - b);//=> 最后的ary等于[8,12,13,14,23]
+        console.log(ary);
+
+    </script>
